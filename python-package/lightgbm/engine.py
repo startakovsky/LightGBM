@@ -385,7 +385,7 @@ def cv(params, train_set, num_boost_round=100,
     if not isinstance(train_set, Dataset):
         raise TypeError("Traninig only accepts Dataset object")
 
-    for alias in ["num_boost_round", "num_iterations", "num_iteration", "num_tree", "num_trees", "num_round", "num_rounds", "n_estimators"]:
+    for alias in ["num_iterations", "num_iteration", "num_tree", "num_trees", "num_round", "num_rounds", "n_estimators"]:
         if alias in params:
             warnings.warn("Found `{}` in params. Will use it instead of argument".format(alias))
             num_boost_round = params.pop(alias)
